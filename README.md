@@ -1,4 +1,4 @@
-gurls Simple URL Finder in HTML Pages
+gurls.py – Simple URL Finder in HTML Pages
 ===============================
 
 Description:
@@ -77,5 +77,6 @@ Notes:
 License:
 --------
 Open source, free to use.
---------
+
+
 Author: doniukz
