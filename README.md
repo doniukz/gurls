@@ -1,5 +1,4 @@
-# gurls
-Simple URL Finder in HTML Pages
+gurls Simple URL Finder in HTML Pages
 ===============================
 
 Description:
