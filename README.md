@@ -48,16 +48,12 @@ Examples:
 ---------
 1) Scan all URLs found at https://www.example.com (default: all)
    python gurls.py -u https://www.example.com
-
 2) Scan only URLs from the same domain:
    python gurls.py -u https://www.example.com -f osdomain
-
 3) Scan only external domains:
    python gurls.py -u https://www.example.com -f onsdomain
-
 4) Scan same domain URLs that have query parameters:
    python gurls.py -u https://www.example.com -f osdomain hasparams
-
 5) Scan URLs with or without file extensions and keep trailing slashes:
    python gurls.py -u https://www.example.com -f osdomain hasext noext keepslash
 
