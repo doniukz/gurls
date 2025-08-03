@@ -79,4 +79,4 @@ License:
 Open source, free to use.
 
 
-Author: </doniukz>
+Author: doni
