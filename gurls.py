@@ -1,4 +1,4 @@
-import argparse, sys, urls_finder
+import argparse, sys, urls_finder, os
 from colorama import Fore, Style, init
 
 
@@ -60,26 +60,55 @@ try:
     except:
         pass
     try:
-        print(Fore.YELLOW + f"Output file: {args.output}")
-    except:
-        pass
+        if args.output is not None:
+            args.output = args.output.strip()
+            print(Fore.YELLOW + f"Output-File: {args.output}")
+            # Ordner vom Skript selbst ermitteln # Pfad für Datei im gleichen Ordner bauen
+            output_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), args.output)
+            f = open(output_file, "w", encoding="utf-8")
+    except Exception as e:
+        sys.stderr.write(f"Fehler: {e}\n")
+
     print(Style.BRIGHT + Fore.CYAN + "====================================\n\n")
+    if args.output is not None:
+        f.write("====================================\n\n")
 
     print(Fore.CYAN + f"[INFO] Send request to: {args.url}")
+    if args.output is not None:
+        f.write(f"[INFO] Send request to: {args.url}\n")
     urls = urls_finder.UrlFinder(args.url.strip(), args=args).search_for_urls()
 
     print(Fore.GREEN + "[INFO] Connection successful, processing HTML..")
+    if args.output is not None:
+        f.write(f"[INFO] Connection successful, processing HTML..\n")
     print(Style.BRIGHT + Fore.CYAN + "\n========== FOUND LINKS ==========")
+    if args.output is not None:
+        f.write(f"\n========== FOUND LINKS ==========\n")
 
     for filter, urls in urls.items():
         print(Fore.CYAN + f"[FILTER] {filter}:")
+        if args.output is not None:
+            f.write(f"[FILTER] {filter}:\n")
         print(Fore.YELLOW + f"[RESULT] {len(urls)} URLs found.")
+        if args.output is not None:
+            f.write(f"[RESULT] {len(urls)} URLs found.\n")
         for i, url in enumerate(urls, start=1):
             print(Fore.WHITE + f"[{i}] " + Fore.GREEN + url)
+            if args.output is not None:
+                f.write(f"[{i}] " + url + "\n")
     print(Style.BRIGHT + Fore.CYAN + "====================================\n")
+    if args.output is not None:
+        f.write("====================================\n")
 except Exception as e:
     print(Fore.RED + f"{e}")
+    if args.output is not None:
+        f.write(f"{e}\n")
     sys.exit(1)
 except KeyboardInterrupt:
     print(Fore.RED + "Finished")
+    if args.output is not None:
+        f.write("Finished\n")
     sys.exit(1)
+finally:
+    if args.output is not None:
+        f.close()
