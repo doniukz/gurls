@@ -44,13 +44,6 @@ parser.add_argument(
     default=["all"],  # als Liste, nicht als String
     help=("Examples: -f all(Default) or osdomain onsdomain hasparams noparams hasext noext keepslash\n")
 )
-
-# Debug: falls kein Parameter angegeben wird, Standard-URL anhängen
-if len(sys.argv) == 1:
-#     sys.argv += ["-h"]
-    sys.argv += ["-u", "www.iso-gruppe.com"] #osdomain
-    sys.argv += ["-f", "noext", "keepslash"]
-
 try:
     args = parser.parse_args()
     print(title)
