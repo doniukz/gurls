@@ -58,7 +58,7 @@ class UrlFinder:
             self.__found_urls[filter].append(url)
 
     def __filter_onsdomain(self, filter, url):
-        if self.__get_domain_from_url(url) != self.__get_domain_from_url(self.__url):
+        if self.__get_domain_from_url(url) not in self.__url:
             self.__found_urls[filter].append(url)
 
     def __filter_hasparams(self, filter, url):

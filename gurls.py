@@ -1,7 +1,6 @@
-import argparse, sys, urllib3, ssl, urls_finder
-from bs4 import BeautifulSoup
+import argparse, sys, urls_finder
 from colorama import Fore, Style, init
-from urllib.parse import urlparse
+
 
 # Init Colorama
 init(autoreset=True)
@@ -47,10 +46,10 @@ parser.add_argument(
 )
 
 # Debug: falls kein Parameter angegeben wird, Standard-URL anhängen
-# if len(sys.argv) == 1:
+if len(sys.argv) == 1:
 #     sys.argv += ["-h"]
-#     # sys.argv += ["-u", "https://example.com"] #osdomain
-#     # sys.argv += ["-f", "noext", "osdomain"]
+    sys.argv += ["-u", "www.iso-gruppe.com"] #osdomain
+    sys.argv += ["-f", "noext", "keepslash"]
 
 try:
     args = parser.parse_args()
