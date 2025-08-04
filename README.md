@@ -81,7 +81,7 @@ Open source, free to use.
 
 Author: doni
 
-Bilder:
+Images:
 --------
 <img width="696" height="736" alt="image" src="https://github.com/user-attachments/assets/2e97d57a-2197-4ce4-9cb5-0d8afe9b7722" />
 <img width="1166" height="829" alt="image" src="https://github.com/user-attachments/assets/776c39b4-825e-4d53-b6ec-0bd663e00645" />
