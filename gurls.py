@@ -62,7 +62,7 @@ try:
     try:
         if args.output is not None:
             args.output = args.output.strip()
-            print(Fore.YELLOW + f"Output-File: {args.output}")
+            print(Fore.YELLOW + f"Output file: {args.output}")
             # Ordner vom Skript selbst ermitteln # Pfad für Datei im gleichen Ordner bauen
             output_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), args.output)
             f = open(output_file, "w", encoding="utf-8")
