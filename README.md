@@ -80,3 +80,14 @@ Open source, free to use.
 
 
 Author: doni
+
+Bilder:
+------
+<img width="1166" height="829" alt="image" src="https://github.com/user-attachments/assets/776c39b4-825e-4d53-b6ec-0bd663e00645" />
+<img width="800" height="789" alt="image" src="https://github.com/user-attachments/assets/1ac287d5-62a9-4759-b18b-523f8a1efe6b" />
+<img width="835" height="963" alt="image" src="https://github.com/user-attachments/assets/4f9d405a-7ac6-46b5-8c79-05926df8e861" />
+<img width="784" height="953" alt="image" src="https://github.com/user-attachments/assets/a47e02cd-d7ef-492a-836f-ef812c6d10d9" />
+
+
+
+
